@@ -26,7 +26,7 @@ function columnsOfNum(num){
 }
 //16 rows
 function rowsOfNum(column,num){
-    console.log(column);
+    
     for(let i =0; i<num; i++){
         divRow = document.createElement("div");
         divRow.classList.add("row");
@@ -34,8 +34,26 @@ function rowsOfNum(column,num){
         
     }
 }
+
+//grab row array
+function getRowArray(){
+    const rowArr = Array.from(document.querySelectorAll(".row"));
+    
+    return rowArr;
+}
+
+//row event listeners for hovering
+function hoverListener(rowArr=getRowArray()){
+    rowArr.forEach(row => row.addEventListener("mouseenter",function (e){
+        e.target.style.backgroundColor="red";
+    }))
+    rowArr.forEach(row => row.addEventListener("mouseleave",function (e){
+        e.target.style.backgroundColor="cyan";
+    }))
+}
 //creates grid
 columnsOfNum(columns);
+hoverListener();
 
 
 //16 divs with square class, square styled in css
