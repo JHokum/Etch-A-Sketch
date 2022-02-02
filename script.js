@@ -58,10 +58,22 @@ function addResetButton(){
     button.textContent="RESET";
     body.append(button);
 }
+
+
+//event listener to clear grid when button pressed
+function resetListener(){
+    const button = document.querySelector("button");
+    button.addEventListener("click", function(e){
+        const container = document.querySelector(".container");
+        console.log(container);
+        container.innerHTML="";
+    })
+}
 addResetButton();
 //creates grid
 columnsOfNum(columns);
 hoverListener();
+resetListener();
 
 
 //16 divs with square class, square styled in css
