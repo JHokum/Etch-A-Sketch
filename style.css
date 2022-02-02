@@ -1,0 +1,18 @@
+.container{
+    display: flex;
+    border: 10px red solid;
+    gap:2em;
+}
+
+.column{
+    display:flex;
+    flex-direction: column;
+    border: 10px blue solid;
+    
+    gap: 1em;
+}
+
+.row{
+    padding: 2em;
+    background-color:rgb(216, 42, 193);
+}
