@@ -1,6 +1,6 @@
-//create a 16x16 grid of squares in the html
-const rows = 16;
-const columns= 16;
+//create a 100x100 grid of squares in the html
+const rows = 100;
+const columns= 100;
 let divContainer;
 let divColumn;
 
@@ -51,6 +51,14 @@ function hoverListener(rowArr=getRowArray()){
         e.target.style.backgroundColor="cyan";
     }))
 }
+
+//add reset button
+function addResetButton(){
+    const button = document.createElement("button");
+    button.textContent="RESET";
+    body.append(button);
+}
+addResetButton();
 //creates grid
 columnsOfNum(columns);
 hoverListener();
