@@ -1,6 +1,6 @@
 //create a 100x100 grid of squares in the html
-const rows = 100;
-const columns= 100;
+let rows = 100;
+let columns= 100;
 let divContainer;
 let divColumn;
 
@@ -65,9 +65,20 @@ function resetListener(){
     const button = document.querySelector("button");
     button.addEventListener("click", function(e){
         const container = document.querySelector(".container");
-        console.log(container);
-        container.innerHTML="";
+        
+        container.innerHTML="";//clears container div
+        gridPrompt();
+        hoverListener();
     })
+}
+
+
+
+//prompt to select rows and columns
+function gridPrompt(){
+    columns = prompt("Please Enter number of squares per side.")
+    rows = columns;
+    columnsOfNum(columns);
 }
 addResetButton();
 //creates grid
