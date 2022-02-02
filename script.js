@@ -1,6 +1,6 @@
 //create a 100x100 grid of squares in the html
-let rows = 100;
-let columns= 100;
+let rows = 16;
+let columns= 16;
 let divContainer;
 let divColumn;
 
